@@ -1,0 +1,12 @@
+<h1>Finance Tracker</h1>
+
+<a href="/add/">Add Transaction</a>
+
+<ul>
+  {% for transaction in transactions %}
+    <li>
+      {{ transaction.title }} - ${{ transaction.amount }}
+      <a href="/delete/{{ transaction.id }}/">Delete</a>
+    </li>
+  {% endfor %}
+</ul>
